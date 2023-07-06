@@ -61,20 +61,20 @@ def get_quizz(use: str, subject: str, username: str = Header(...), password: str
 
 @api.post("/question")
 def post_question(
-    question: str,
-    subject: str,
-    use: str,
-    responseA: str,
-    responseB: str,
-    responseC: str,
-    responseD: str,
-    remark: str,
+    question: str = Header(...),
+    subject: str = Header(...),
+    use: str = Header(...),
+    responseA: str = Header(...),
+    responseB: str = Header(...),
+    responseC: str = Header(...),
+    responseD: str = Header(...),
+    remark: str = Header(...),
     username: str = Header(...),
     password: str = Header(...),
 ):
     """post_question permet d'ajouter une question à la bdd. Un compte admin est nécessaire. Les clés subject, use, question, response A...D et remark doivent être complétées. On peut mettre un champ vide.
     exemple:
-curl -X POST "http://localhost:8000/question" -H "username: admin" -H "password: 4dm1N" -H "subject: BDD" -H "use: Test%20de%20positionnement" -H "question: Quelle%20est%20la%20réponse%20de%20test%20?" -H "responseA: answer%20de%20test42" -H "responseB: answer%20de%20test42" -H "responseC: answer%20de%20test42" -H "responseD: answer%20de%20test42" -H "remark: test42"
+curl -X POST "http://localhost:8000/question" -H "username: admin" -H "password: 4dm1N" -H "subject: BDD" -H "use: Test de positionnement" -H "question: Quelle est la réponse de test%" -H "responseA: answer de test42" -H "responseB: answer de test42" -H "responseC: answer de test42" -H "responseD: answer de test42" -H "remark: test42"
     """
     if isAdmin(username, password):
         with open("assets/questions.csv", "a") as file:
