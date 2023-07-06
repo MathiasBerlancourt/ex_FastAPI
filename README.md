@@ -66,6 +66,11 @@ curl -X GET "http://localhost:8000/APIstatus"
 
 Endpoint wich return the quizz database
 
+<b>Headers :</b>
+
+- username (required)
+- password (required)
+
 ```console
      curl -X GET "http://localhost:8000/data -H "username: <username>" -H "password: <password>"
 
@@ -74,6 +79,16 @@ Endpoint wich return the quizz database
 ### GET /quizz
 
 Endpoint to get a quizz with randomized questions order. The user need to choose a subject an use
+
+<b>Headers :</b>
+
+- username (required)
+- password (required)
+
+<b>Params :</b>
+
+- use (required)
+- subject (required)
 
 ```console
      curl -X GET "http://localhost:8000/quizz?use=Test%20de%20positionnement&subject=BDD" -H "username: <username>" -H "password: <password>"
@@ -85,6 +100,22 @@ Endpoint to get a quizz with randomized questions order. The user need to choose
 
 Endpoint to add a question to the questions database. the user need to add subject, use, question, response A...D et remark doivent être complétées. The user can fill a blank string.
 An admin access is mandatory.
+
+<b>Headers :</b>
+
+- username (required)
+- password (required)
+
+<b>Params :</b>
+
+- use (required)
+- subject (required)
+- question (required)
+- responseA (required)
+- responseB (required)
+- responseC (required)
+- responseD (required)
+- remark (required)
 
 ```console
 curl -X POST "http://localhost:8000/question" -H "username: admin" -H "password: 4dm1N" -H "subject: BDD" -H "use: Test de positionnement" -H "question: Quelle est la réponse de test%" -H "responseA: answer de test42" -H "responseB: answer de test42" -H "responseC: answer de test42" -H "responseD: answer de test42" -H "remark: test42"
