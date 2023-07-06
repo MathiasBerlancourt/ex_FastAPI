@@ -4,9 +4,9 @@ with open('assets/users_db.json', 'r') as file:
     users_db = json.load(file)
 
 
-def isAuthentificated(username, password):
-    for user in users_db:
-        if user["username"] == username and user["password"] == password:
+def isAuthenticated(username, password):
+    for user, user_password in users_db.items():
+        if user == username and user_password == password:
             return True
     return False
 
@@ -14,5 +14,4 @@ def isAuthentificated(username, password):
 def isAdmin(username, password):
     if username == "admin" and password == "4dm1N":
         return True
-    else:
-        return False
+    return False
