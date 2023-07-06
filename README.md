@@ -5,7 +5,7 @@
 Open a terminal and follow this step:
 
 ```console
-git clone https://github.com/MathiasBerlancourt/ex_FastAPI
+$ git clone https://github.com/MathiasBerlancourt/ex_FastAPI
 
 ```
 
@@ -58,7 +58,7 @@ On your browser check the API url with '/docs' endpoint
 Endpoint to check the API connection
 
 ```console
-curl -X GET "http://localhost:8000/APIstatus"
+$ curl -X GET "http://localhost:8000/APIstatus"
 
 ```
 
@@ -72,7 +72,7 @@ Endpoint wich return the quizz database
 - password (required)
 
 ```console
-     curl -X GET "http://localhost:8000/data -H "username: <username>" -H "password: <password>"
+$ curl -X GET "http://localhost:8000/data -H "username: <username>" -H "password: <password>"
 
 ```
 
@@ -91,7 +91,7 @@ Endpoint to get a quizz with randomized questions order. The user need to choose
 - subject (required)
 
 ```console
-     curl -X GET "http://localhost:8000/quizz?use=Test%20de%20positionnement&subject=BDD" -H "username: <username>" -H "password: <password>"
+$ curl -X GET "http://localhost:8000/quizz?use=Test%20de%20positionnement&subject=BDD" -H "username: <username>" -H "password: <password>"
 
 
 ```
@@ -118,7 +118,7 @@ An admin access is mandatory.
 - remark (required)
 
 ```console
-curl -X POST "http://localhost:8000/question" -H "username: admin" -H "password: 4dm1N" -H "subject: BDD" -H "use: Test de positionnement" -H "question: Quelle est la réponse de test%" -H "responseA: answer de test42" -H "responseB: answer de test42" -H "responseC: answer de test42" -H "responseD: answer de test42" -H "remark: test42"
+$ curl -X POST "http://localhost:8000/question" -H "username: admin" -H "password: 4dm1N" -H "subject: BDD" -H "use: Test de positionnement" -H "question: Quelle est la réponse de test%" -H "responseA: answer de test42" -H "responseB: answer de test42" -H "responseC: answer de test42" -H "responseD: answer de test42" -H "remark: test42"
 
 
 ```
@@ -128,20 +128,20 @@ curl -X POST "http://localhost:8000/question" -H "username: admin" -H "password:
 ### GET /data
 
 ```console
-     curl -X GET "http://localhost:8000/data" -H "username: alice" -H "password: wonderland"
+$ curl -X GET "http://localhost:8000/data" -H "username: alice" -H "password: wonderland"
 
 ```
 
 ### GET /quizz
 
 ```console
-     curl -X GET "http://localhost:8000/quizz?use=Test%20de%20positionnement&subject=BDD" -H "username: alice" -H "password: wonderland"
+$ curl -X GET "http://localhost:8000/quizz?use=Test%20de%20positionnement&subject=BDD" -H "username: alice" -H "password: wonderland"
 
 ```
 
 ### POST /question
 
 ```console
-curl -X POST "http://localhost:8000/question" -H "username: admin" -H "password: 4dm1N" -H "subject: BDD" -H "use: Test de positionnement" -H "question: Quelle est la réponse de test%" -H "responseA: answer de test42" -H "responseB: answer de test42" -H "responseC: answer de test42" -H "responseD: answer de test42" -H "remark: test42"
+$ curl -X POST "http://localhost:8000/question" -H "username: admin" -H "password: 4dm1N" -H "subject: BDD" -H "use: Test de positionnement" -H "question: Quelle est la réponse de test%" -H "responseA: answer de test42" -H "responseB: answer de test42" -H "responseC: answer de test42" -H "responseD: answer de test42" -H "remark: test42"
 
 ```
