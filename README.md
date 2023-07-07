@@ -2,7 +2,7 @@
 
 ### Clone it
 
-Open a terminal and follow this step:
+Open a terminal and follow these steps:
 
 ```console
 $ git clone https://github.com/MathiasBerlancourt/ex_FastAPI
@@ -64,7 +64,7 @@ $ curl -X GET "http://localhost:8000/APIstatus"
 
 ### GET /data
 
-Endpoint wich return the quizz database
+Endpoint which return the quizz database
 
 <b>Headers :</b>
 
@@ -78,7 +78,7 @@ $ curl -X GET "http://localhost:8000/data -H "username: <username>" -H "password
 
 ### GET /quizz
 
-Endpoint to get a quizz with randomized questions order. The user need to choose a subject an use
+Endpoint to get a quiz with randomized question order. The user needs to choose a subject and use.
 
 <b>Headers :</b>
 
