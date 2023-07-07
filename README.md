@@ -45,7 +45,7 @@ Postman is a standalone software testing API (Application Programming Interface)
 
 Open a new terminal and enter you API call following the documentation
 
-##API documentation
+## API documentation
 
 # On swagger
 
