@@ -98,8 +98,7 @@ $ curl -X GET "http://localhost:8000/quizz?use=Test%20de%20positionnement&subjec
 
 ### POST /question
 
-Endpoint to add a question to the questions database. the user need to add subject, use, question, response A...D et remark doivent être complétées. The user can fill a blank string.
-An admin access is mandatory.
+Endpoint to add a question to the question database. The user needs to add subject, use, question, responseA to D, and remark. The user can leave a blank string for any of these fields. Admin access is mandatory.
 
 <b>Headers :</b>
 
